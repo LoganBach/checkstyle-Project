@@ -3,9 +3,9 @@ package main.java;
 import com.puppycrawl.tools.checkstyle.api.*;
 
 
-public class CommentCheck extends AbstractCheck{
+public class LoopingStatementCheck extends AbstractCheck{
 
-	private int commentCount = 0;
+	private int loopCount = 0;
 	
 	@Override
 	public boolean isCommentNodesRequired() {
@@ -19,15 +19,16 @@ public class CommentCheck extends AbstractCheck{
 	
 	@Override
 	public void visitToken(DetailAST ast) {
-		commentCount++;
+		loopCount++;
 	}
 
 	@Override
 	public int[] getAcceptableTokens() {
 		// TODO Auto-generated method stub
 		return new int[] {
-				TokenTypes.SINGLE_LINE_COMMENT,
-				TokenTypes.BLOCK_COMMENT_BEGIN,
+				TokenTypes.LITERAL_FOR,
+				TokenTypes.LITERAL_WHILE,
+				TokenTypes.LITERAL_DO
 		};
 	}
 
@@ -39,12 +40,12 @@ public class CommentCheck extends AbstractCheck{
 	
 	@Override
 	public void beginTree(DetailAST ast) {
-		commentCount = 0;
+		loopCount = 0;
 	}
 	
 	@Override
 	public void finishTree(DetailAST ast) {
-		log(0, "Total Comments: " + commentCount + "-signature LB");
+		log(0, "Total Looping Statements: " + loopCount + "-signature LB");
 	}
 	
 	

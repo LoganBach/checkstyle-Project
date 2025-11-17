@@ -3,7 +3,7 @@ package main.java;
 import com.puppycrawl.tools.checkstyle.api.*;
 
 
-public class CommentCheck extends AbstractCheck{
+public class LineCommentCheck extends AbstractCheck{
 
 	private int commentCount = 0;
 	
@@ -27,7 +27,6 @@ public class CommentCheck extends AbstractCheck{
 		// TODO Auto-generated method stub
 		return new int[] {
 				TokenTypes.SINGLE_LINE_COMMENT,
-				TokenTypes.BLOCK_COMMENT_BEGIN,
 		};
 	}
 
@@ -44,7 +43,7 @@ public class CommentCheck extends AbstractCheck{
 	
 	@Override
 	public void finishTree(DetailAST ast) {
-		log(0, "Total Comments: " + commentCount + "-signature LB");
+		log(0, "Total Line Comments: " + commentCount + "-signature LB");
 	}
 	
 	
