@@ -8,11 +8,6 @@ public class LoopingStatementCheck extends AbstractCheck{
 	private int loopCount = 0;
 	
 	@Override
-	public boolean isCommentNodesRequired() {
-		return true;
-	}
-	
-	@Override
 	public int[] getDefaultTokens() {
 		return getAcceptableTokens();
 	}

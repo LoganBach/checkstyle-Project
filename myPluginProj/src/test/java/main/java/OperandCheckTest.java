@@ -8,12 +8,6 @@ import org.junit.jupiter.api.Test;
 import com.puppycrawl.tools.checkstyle.api.*;
 
 class OperandCheckTest {
-
-	@Test
-	public void testIsCommentNodesRequired() {
-		OperandCheck operandCheck = new OperandCheck();
-		assertEquals(true, operandCheck.isCommentNodesRequired());
-	}
 	
 	@Test
 	public void testGetDefaultTokens() {

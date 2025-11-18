@@ -8,12 +8,6 @@ import org.junit.jupiter.api.Test;
 import com.puppycrawl.tools.checkstyle.api.*;
 
 class LoopingStatementCheckTest {
-
-	@Test
-	public void testIsCommentNodesRequired() {
-		LoopingStatementCheck loopingStatementCheck = new LoopingStatementCheck();
-		assertEquals(true, loopingStatementCheck.isCommentNodesRequired());
-	}
 	
 	@Test
 	public void testGetDefaultTokens() {

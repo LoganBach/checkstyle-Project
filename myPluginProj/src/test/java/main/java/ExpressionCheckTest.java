@@ -11,12 +11,6 @@ import com.puppycrawl.tools.checkstyle.api.DetailAST;
 class ExpressionCheckTest {
 
 	@Test
-	public void testIsCommentNodesRequired() {
-		ExpressionCheck expressionCheck = new ExpressionCheck();
-		assertEquals(true, expressionCheck.isCommentNodesRequired());
-	}
-	
-	@Test
 	public void testGetDefaultTokens() {
 		ExpressionCheck spy = spy(new ExpressionCheck());
 		int[] mockArr = {2, 2};

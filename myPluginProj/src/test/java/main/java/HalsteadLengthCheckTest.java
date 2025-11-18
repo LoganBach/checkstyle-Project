@@ -8,12 +8,6 @@ import org.junit.jupiter.api.Test;
 import com.puppycrawl.tools.checkstyle.api.*;
 
 class HalsteadLengthCheckTest {
-
-	@Test
-	public void testIsCommentNodesRequired() {
-		HalsteadLengthCheck halsteadLengthCheck = new HalsteadLengthCheck();
-		assertEquals(true, halsteadLengthCheck.isCommentNodesRequired());
-	}
 	
 	@Test
 	public void testGetDefaultTokens() {

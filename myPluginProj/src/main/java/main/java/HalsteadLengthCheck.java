@@ -8,11 +8,6 @@ public class HalsteadLengthCheck extends AbstractCheck{
 	private int halsteadCount = 0;
 	
 	@Override
-	public boolean isCommentNodesRequired() {
-		return true;
-	}
-	
-	@Override
 	public int[] getDefaultTokens() {
 		return getAcceptableTokens();
 	}

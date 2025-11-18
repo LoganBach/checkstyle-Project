@@ -8,11 +8,6 @@ public class OperatorCheck extends AbstractCheck{
 	private int operatorCount = 0;
 	
 	@Override
-	public boolean isCommentNodesRequired() {
-		return true;
-	}
-	
-	@Override
 	public int[] getDefaultTokens() {
 		return getAcceptableTokens();
 	}

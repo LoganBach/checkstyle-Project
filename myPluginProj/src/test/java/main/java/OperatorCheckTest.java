@@ -10,12 +10,6 @@ import com.puppycrawl.tools.checkstyle.api.*;
 class OperatorCheckTest {
 
 	@Test
-	public void testIsCommentNodesRequired() {
-		OperatorCheck operatorCheck = new OperatorCheck();
-		assertEquals(true, operatorCheck.isCommentNodesRequired());
-	}
-	
-	@Test
 	public void testGetDefaultTokens() {
 		OperatorCheck spy = spy(new OperatorCheck());
 		int[] mockArr = {2, 2};

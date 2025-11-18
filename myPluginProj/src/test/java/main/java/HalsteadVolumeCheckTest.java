@@ -6,8 +6,6 @@ import org.junit.jupiter.api.Test;
 
 
 import com.puppycrawl.tools.checkstyle.api.*;
-import java.util.List;
-
 
 class HalsteadVolumeCheckTest {
 	

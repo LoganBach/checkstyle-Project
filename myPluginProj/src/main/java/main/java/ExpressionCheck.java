@@ -8,11 +8,6 @@ public class ExpressionCheck extends AbstractCheck{
 	private int expressionCount = 0;
 	
 	@Override
-	public boolean isCommentNodesRequired() {
-		return true;
-	}
-	
-	@Override
 	public int[] getDefaultTokens() {
 		return getAcceptableTokens();
 	}
