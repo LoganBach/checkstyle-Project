@@ -13,8 +13,17 @@ public class HalsteadVolumeCheck extends AbstractCheck{
 	private int halsteadVocab = 0;
 	private int programLength = 0;
 	
-
 	
+	//setter for tests
+	public void setHalsteadVocab(int val) {
+		halsteadVocab = val;
+	}
+	
+	//setter for tests
+	public void setProgramLength(int val) {
+		programLength = val;
+	}
+		
 	@Override
 	public int[] getDefaultTokens() {
 		return getAcceptableTokens();
@@ -130,7 +139,11 @@ public class HalsteadVolumeCheck extends AbstractCheck{
 	
 	@Override
 	public void finishTree(DetailAST ast) {
-		double halsteadVolume = programLength * (Math.log(halsteadVocab) / Math.log(2));
+		double halsteadVolume = 0;
+		if(halsteadVocab > 0) {
+			halsteadVolume = programLength * (Math.log(halsteadVocab) / Math.log(2));
+		}
+		
 		log(0, "Halstead Volume: " + halsteadVolume + "-signature LB");
 	}
 	

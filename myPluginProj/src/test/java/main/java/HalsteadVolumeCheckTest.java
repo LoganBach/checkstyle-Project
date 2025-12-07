@@ -155,7 +155,21 @@ class HalsteadVolumeCheckTest {
 		
 		doNothing().when(spy).log(anyInt(), anyString());
 		spy.finishTree(ast);
-		verify(spy).log(0, "Halstead Volume: 0-signature LB");
+		verify(spy).log(0, "Halstead Volume: 0.0-signature LB");
+	}
+	
+	@Test
+	public void testFinishTreeVocabNonZero() {
+		HalsteadVolumeCheck spy = spy(new HalsteadVolumeCheck());
+		
+		DetailAST ast = mock(DetailAST.class);
+		
+		doNothing().when(spy).log(anyInt(), anyString());
+		spy.setProgramLength(0);
+		spy.setHalsteadVocab(1);
+		spy.finishTree(ast);
+		
+		verify(spy).log(0, "Halstead Volume: 0.0-signature LB");
 	}
 
 }
