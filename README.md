@@ -4,7 +4,8 @@ Eclipse plugin to detect structual metrics through custom checks exteding from t
 
 
 **Check Details:**
-
+ - Each check uses checkstyle to count tokens to get a total count of the specific types of occurances. For example counting line comments counts the occurances of the toke SINGLE_LINE_COMMENT. SINGLE_LINE_COMMENT represents the beginning of a single line comment '//'. The counting works by traversing an abstract synax tree for the code being checked. It calls a function visitToken whenever one of the tokentypes being looked for is found while traversing the tree. The one check that requires calculating a result besides just counting tokens is the Halstead Volume Check. This check calculates the volume by the equation Program Length * log2(Halstead Vocabulary). Where Program Length is the total operand and operator occurances, and Halstead Vocabulary is the total distinct operand and operator occurances.
+   
 **MISC Checks**
 - AntiHungarian Check: Demo Check which checks for hungarian notation
   No JUnit Tests written for the AntiHungarian Check
