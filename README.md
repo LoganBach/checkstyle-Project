@@ -33,4 +33,5 @@ Eclipse plugin to detect structual metrics through custom checks exteding from t
   **100%** Line and Branch coverage from Junit Test Class
   
 **Test Details:**
+- All whitebox tests use Junit and Mockito and coverage was tested with eclipse built in coverage testing
 - The only function which required multiple cases (the only function with a branch) was the HalsteadVolumeCheck.java's VisitToken() function. In this function a list of unique operators/operands visited is checked to see if it does not contain the currently visited token. To cover the case where it has not been visited the function was called without any extra modifications. To cover the case where it does contain, the test contains a doReturn TokenType.FALSE when DetailAST.getType(). Then the function is called twice.
