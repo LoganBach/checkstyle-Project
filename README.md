@@ -14,16 +14,27 @@ Eclipse plugin to detect structual metrics through custom checks exteding from t
 
 **Category A Checks**
 - Comment Check: Counts the number of single and block comments in the file.
+  Tokens counted are: SINGLE_LINE_COMMENT, BLOCK_COMMENT_BEGIN
   **100%** Line and Branch coverage from Junit Test Class
+  
 - Line Comment Check: Counts the number of Line comments in the file.
+  Tokens counted are: SINGLE_LINE_COMMENT
   **100%** Line and Branch coverage from Junit Test Class
+  
 - Looping Statement Check: Counts the number of looping statements in the file.
+  Tokens counted are: LITERAL_FOR, LITERAL_WHILE, LITERAL_DO
   **100%** Line and Branch coverage from Junit Test Class
+  
 - Operator Check: Counts the number of Halstead Operators in the file.
+  Check the getAcceptableTokens() in OperatorCheck.java 
   **100%** Line and Branch coverage from Junit Test Class
+  
 - Operand Check: Counts the number of Halstead Operands in the file.
+  Check the getAcceptableTokens() in OperandCheck.java 
   **100%** Line and Branch coverage from Junit Test Class
+  
 - Expression Check: Counts the number of Expressions in the file.
+  Tokens counted are: EXPR
   **100%** Line and Branch coverage from Junit Test Class
 
 **Category B Checks**
