@@ -28,8 +28,12 @@ class HalsteadVolumeCheckTest {
 		when(ast.getType()).thenReturn(TokenTypes.PLUS);
 
 		
+		halsteadVolumeCheck.setHalsteadVocab(0);
 		halsteadVolumeCheck.visitToken(ast);
+		assertEquals(1, halsteadVolumeCheck.getVocab());
 		halsteadVolumeCheck.visitToken(ast);
+		assertEquals(1, halsteadVolumeCheck.getVocab());
+		assertEquals(2, halsteadVolumeCheck.getLength());
 	}
 	
 	@Test

@@ -26,7 +26,10 @@ class OperandCheckTest {
 		
 		DetailAST ast = mock(DetailAST.class);
 		
+		operandCheck.setCount(0);
 		operandCheck.visitToken(ast);
+		
+		assertEquals(1, operandCheck.getCount());
 	}
 	
 	@Test

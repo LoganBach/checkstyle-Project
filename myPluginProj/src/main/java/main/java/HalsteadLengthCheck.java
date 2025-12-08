@@ -7,6 +7,16 @@ public class HalsteadLengthCheck extends AbstractCheck{
 
 	private int halsteadCount = 0;
 	
+	//setter for tests
+	public void setCount(int val) {
+		halsteadCount = val;
+	}
+	
+	//getter for tests
+	public int getCount() {
+		return halsteadCount;
+	}
+	
 	@Override
 	public int[] getDefaultTokens() {
 		return getAcceptableTokens();

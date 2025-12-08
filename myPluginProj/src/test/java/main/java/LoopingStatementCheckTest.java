@@ -26,7 +26,9 @@ class LoopingStatementCheckTest {
 		
 		DetailAST ast = mock(DetailAST.class);
 		
+		loopingStatementCheck.setCount(0);
 		loopingStatementCheck.visitToken(ast);
+		assertEquals(1, loopingStatementCheck.getCount());
 	}
 	
 	@Test

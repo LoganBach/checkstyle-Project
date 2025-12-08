@@ -33,7 +33,9 @@ class LineCommentCheckTest {
 		
 		DetailAST ast = mock(DetailAST.class);
 		
+		lineCommentCheck.setCount(0);
 		lineCommentCheck.visitToken(ast);
+		assertEquals(1, lineCommentCheck.getCount());
 	}
 	
 	@Test

@@ -7,6 +7,16 @@ public class OperandCheck extends AbstractCheck{
 
 	private int operandCount = 0;
 	
+	//setter for tests
+	public void setCount(int val) {
+		operandCount = val;
+	}
+	
+	//getter for tests
+	public int getCount() {
+		return operandCount;
+	}
+	
 	@Override
 	public int[] getDefaultTokens() {
 		return getAcceptableTokens();

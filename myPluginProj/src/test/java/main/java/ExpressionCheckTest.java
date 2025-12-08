@@ -27,7 +27,10 @@ class ExpressionCheckTest {
 		
 		DetailAST ast = mock(DetailAST.class);
 		
+		expressionCheck.setCount(0);
 		expressionCheck.visitToken(ast);
+		
+		assertEquals(1, expressionCheck.getCount());
 	}
 	
 	@Test

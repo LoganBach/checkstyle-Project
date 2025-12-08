@@ -19,9 +19,19 @@ public class HalsteadVolumeCheck extends AbstractCheck{
 		halsteadVocab = val;
 	}
 	
+	//getter for tests
+	public int getVocab() {
+		return halsteadVocab;
+	}
+	
 	//setter for tests
 	public void setProgramLength(int val) {
 		programLength = val;
+	}
+	
+	//setter for tests
+	public int getLength() {
+		return programLength;
 	}
 		
 	@Override

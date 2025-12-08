@@ -26,7 +26,10 @@ class HalsteadLengthCheckTest {
 		
 		DetailAST ast = mock(DetailAST.class);
 		
+		halsteadLengthCheck.setCount(0);
 		halsteadLengthCheck.visitToken(ast);
+		
+		assertEquals(1, halsteadLengthCheck.getCount());
 	}
 	
 	@Test

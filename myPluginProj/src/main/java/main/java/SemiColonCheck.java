@@ -7,6 +7,16 @@ public class SemiColonCheck extends AbstractCheck{
 
 	private int semiCount = 0;
 	
+	//setter for tests
+	public void setCount(int val) {
+		semiCount = val;
+	}
+	
+	//getter for tests
+	public int getCount() {
+		return semiCount;
+	}
+	
 	@Override
 	public int[] getDefaultTokens() {
 		return getAcceptableTokens();

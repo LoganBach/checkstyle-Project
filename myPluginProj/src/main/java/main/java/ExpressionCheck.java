@@ -7,6 +7,16 @@ public class ExpressionCheck extends AbstractCheck{
 
 	private int expressionCount = 0;
 	
+	//setter for tests
+	public void setCount(int val) {
+		expressionCount = val;
+	}
+	
+	//getter for tests
+	public int getCount() {
+		return expressionCount;
+	}
+		
 	@Override
 	public int[] getDefaultTokens() {
 		return getAcceptableTokens();

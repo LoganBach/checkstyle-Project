@@ -32,8 +32,10 @@ class CommentCheckTest {
 		CommentCheck commentCheck = new CommentCheck();
 		
 		DetailAST ast = mock(DetailAST.class);
-		
+		commentCheck.setCommentCount(1);
 		commentCheck.visitToken(ast);
+		
+		assertEquals(2, commentCheck.getCommentCount());
 	}
 	
 	@Test

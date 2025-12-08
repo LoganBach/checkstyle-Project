@@ -27,7 +27,9 @@ class SemiColonCheckTest {
 		
 		DetailAST ast = mock(DetailAST.class);
 		
+		semiColonCheck.setCount(0);
 		semiColonCheck.visitToken(ast);
+		assertEquals(1, semiColonCheck.getCount());
 	}
 	
 	@Test

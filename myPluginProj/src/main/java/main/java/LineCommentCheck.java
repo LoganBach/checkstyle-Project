@@ -7,6 +7,16 @@ public class LineCommentCheck extends AbstractCheck{
 
 	private int commentCount = 0;
 	
+	//setter for tests
+	public void setCount(int val) {
+		commentCount = val;
+	}
+	
+	//getter for tests
+	public int getCount() {
+		return commentCount;
+	}
+		
 	@Override
 	public boolean isCommentNodesRequired() {
 		return true;

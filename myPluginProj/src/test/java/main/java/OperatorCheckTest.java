@@ -26,7 +26,9 @@ class OperatorCheckTest {
 		
 		DetailAST ast = mock(DetailAST.class);
 		
+		operatorCheck.setCount(0);
 		operatorCheck.visitToken(ast);
+		assertEquals(1, operatorCheck.getCount());
 	}
 	
 	@Test

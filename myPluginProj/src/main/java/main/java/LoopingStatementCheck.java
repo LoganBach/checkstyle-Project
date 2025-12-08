@@ -7,6 +7,16 @@ public class LoopingStatementCheck extends AbstractCheck{
 
 	private int loopCount = 0;
 	
+	//setter for tests
+	public void setCount(int val) {
+		loopCount = val;
+	}
+	
+	//getter for tests
+	public int getCount() {
+		return loopCount;
+	}
+	
 	@Override
 	public int[] getDefaultTokens() {
 		return getAcceptableTokens();
