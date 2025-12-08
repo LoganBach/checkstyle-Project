@@ -13,15 +13,18 @@ public class BlackBoxTestEngine {
 	
 	public static String testCheck(AbstractCheck check, File file) throws Exception {
 
+		Checker checker = new Checker();
+		checker.setModuleClassLoader(Checker.class.getClassLoader());
 		
 		DefaultConfiguration treeWalkerConfig= new DefaultConfiguration("TreeWalker");
+		DefaultConfiguration checkerConfig = new DefaultConfiguration("config");
 		DefaultConfiguration checkConfig = new DefaultConfiguration(check.getClass().getName());
 		
 		treeWalkerConfig.addChild(checkConfig);
 		
-		Checker checker = new Checker();
-		checker.setModuleClassLoader(Checker.class.getClassLoader());
-		checker.configure(treeWalkerConfig);
+		checkerConfig.addChild(treeWalkerConfig);
+		checker.configure(checkerConfig);
+		
 		
 		BlackBoxEngineHelper listener = new BlackBoxEngineHelper();
 		checker.addListener(listener);
